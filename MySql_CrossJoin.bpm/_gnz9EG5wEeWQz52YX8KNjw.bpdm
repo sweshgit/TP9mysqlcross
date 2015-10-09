@@ -1,0 +1,34 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:Cross_Join_Board="http://thisdiagram/Cross_Join_Board" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns="urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice" xmlns:this="http://thisdiagram/Pool" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Pool">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Cross_Join_Board" bpdm:prefix="Cross_Join_Board" bpdm:comment="contrib=&apos;partner-pool:///_MjAZsG5qEeWQz52YX8KNjw"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Pool" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_MjAZsG5qEeWQz52YX8KNjw"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_MjAZsG5qEeWQz52YX8KNjw" bpdm:label="Cross Join Board"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Pool" bpdm:ID="_gnz9EG5wEeWQz52YX8KNjw">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="poolAndCross_Join_BoardForCrossJoinOPPortPlkVar" partnerLinkType="diag:PoolAndCross_Join_BoardForCrossJoinOPPortPlk" myRole="Pool_for_Cross_Join_Board" bpdm:enableSharing="false" bpdm:providedService="ns:CrossJoinOPService" bpdm:providedPort="CrossJoinOPPort" bpdm:provideSOAPAddress="http://localhost:8080/intalio/ode/processes/MySql_CrossJoin/Connectors/Database/CrossJoinOP" bpdm:providedIsDefault="true" bpdm:clientTasks="_gnz9EG5wEeWQz52YX8KNjw:_rmEaYW5wEeWQz52YX8KNjw" bpdm:isManaged="true" bpdm:otherPoolId="_MjAZsG5qEeWQz52YX8KNjw"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="nsCrossJoinOPRequestMsg" messageType="ns:CrossJoinOPInput" binding="ns:CrossJoinOPPortSoapBinding" operation="CrossJoinOP" opMsgType="0" bpdm:id="_sLe0kG5wEeWQz52YX8KNjw" bpdm:messageIds="inc:_sKvNsG5wEeWQz52YX8KNjw"/>
+            <bpel:variable name="nsCrossJoinOPResponseMsg" messageType="ns:CrossJoinOPOutput" binding="ns:CrossJoinOPPortSoapBinding" operation="CrossJoinOP" opMsgType="1" bpdm:id="_stzegG5wEeWQz52YX8KNjw" bpdm:messageIds=" out:_stNBkG5wEeWQz52YX8KNjw">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="ns:CrossJoinOPOutput" bpdm:linkedPart="parameters" bpdm:binding="ns:CrossJoinOPPortSoapBinding" bpdm:opMsgType="1" bpdm:operation="CrossJoinOP"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="CrossJoinOP" partnerLink="poolAndCross_Join_BoardForCrossJoinOPPortPlkVar" portType="ns:CrossJoinOPPort" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Provide-Service-Crossjoinop" bpdm:ID="_rmEaYW5wEeWQz52YX8KNjw">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="nsCrossJoinOPRequestMsg" bpdm:msgVarScopeId="_gnz9EG5wEeWQz52YX8KNjw" bpdm:variableIsManaged="true" bpdm:messageType="ns:CrossJoinOPInput" bpdm:binding="ns:CrossJoinOPPortSoapBinding" bpdm:ID="_sKvNsG5wEeWQz52YX8KNjw"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="nsCrossJoinOPResponseMsg" bpdm:msgVarScopeId="_gnz9EG5wEeWQz52YX8KNjw" bpdm:variableIsManaged="true" bpdm:messageType="ns:CrossJoinOPOutput" bpdm:binding="ns:CrossJoinOPPortSoapBinding" bpdm:ID="_stNBkG5wEeWQz52YX8KNjw"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

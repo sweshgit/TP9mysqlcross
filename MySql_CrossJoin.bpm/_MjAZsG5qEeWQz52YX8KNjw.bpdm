@@ -1,0 +1,100 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Start="http://thisdiagram/Start" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:this="http://thisdiagram/Cross_Join_Board" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.example.org/message" xmlns:ns="urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice" xmlns:Pool="http://thisdiagram/Pool" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Cross_Join_Board">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Start" bpdm:prefix="Start" bpdm:comment="contrib=&apos;partner-pool:///_EDIqYG5qEeWQz52YX8KNjw"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Cross_Join_Board" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/message" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///Schemas/message.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Pool" bpdm:prefix="Pool" bpdm:comment="contrib=&apos;partner-pool:///_gnz9EG5wEeWQz52YX8KNjw"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_EDIqYG5qEeWQz52YX8KNjw"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="ForStart">
+                <wsdl:operation name="Begin" bpdm:source="partner-pool:///_EDIqYG5qEeWQz52YX8KNjw">
+                    <wsdl:input message="this:BeginRequest" name="Begin"/>
+                    <wsdl:output message="this:BeginResponse" name="BeginResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForStart" type="this:ForStart" bpdm:isSynchronized="true"/>
+            <xs:element name="BeginRequest" type="tns:msg" bpdm:source="partner-pool:///_EDIqYG5qEeWQz52YX8KNjw"/>
+            <wsdl:message name="BeginRequest" bpdm:source="partner-pool:///_EDIqYG5qEeWQz52YX8KNjw">
+                <wsdl:part name="body" element="this:BeginRequest"/>
+            </wsdl:message>
+            <xs:element name="BeginResponse" type="xs:string" bpdm:source="partner-pool:///_EDIqYG5qEeWQz52YX8KNjw"/>
+            <wsdl:message name="BeginResponse" bpdm:source="partner-pool:///_EDIqYG5qEeWQz52YX8KNjw">
+                <wsdl:part name="body" element="this:BeginResponse"/>
+            </wsdl:message>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_EDIqYG5qEeWQz52YX8KNjw" bpdm:label="Start"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_gnz9EG5wEeWQz52YX8KNjw" bpdm:label="Pool"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/message.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Cross Join Board" bpdm:ID="_MjAZsG5qEeWQz52YX8KNjw">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="cross_Join_BoardAndStartPlkVar" partnerLinkType="diag:Cross_Join_BoardAndStart" myRole="Cross_Join_Board_for_Start" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForStart" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Cross_Join_Board/Start" bpdm:providedIsDefault="true" bpdm:clientTasks="_MjAZsG5qEeWQz52YX8KNjw:_TGLy0G5qEeWQz52YX8KNjw, _MjAZsG5qEeWQz52YX8KNjw:_aonpgG5qEeWQz52YX8KNjw" bpdm:isManaged="true" bpdm:otherPoolId="_EDIqYG5qEeWQz52YX8KNjw"/>
+            <bpel:partnerLink name="poolAndCross_Join_BoardForCrossJoinOPPortPlkVar" partnerLinkType="diag:PoolAndCross_Join_BoardForCrossJoinOPPortPlk" initializePartnerRole="yes" partnerRole="Pool_for_Cross_Join_Board" bpdm:invokedService="ns:CrossJoinOPService" bpdm:invokedPort="CrossJoinOPPort" bpdm:invokedSOAPAddress="http://localhost:8080/intalio/ode/processes/MySql_CrossJoin/Connectors/Database/CrossJoinOP" bpdm:invokedIsDefault="true" bpdm:clientTasks="_MjAZsG5qEeWQz52YX8KNjw:_Uf6l4G5qEeWQz52YX8KNjw" bpdm:isManaged="true" bpdm:otherPoolId="_gnz9EG5wEeWQz52YX8KNjw"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="thisBeginRequestMsg" messageType="this:BeginRequest" bpdm:id="_TGxot25qEeWQz52YX8KNjw" bpdm:messageIds="inc:_TGU8wW5qEeWQz52YX8KNjw"/>
+            <bpel:variable name="thisBeginResponseMsg" messageType="this:BeginResponse" bpdm:id="_cqid8G5qEeWQz52YX8KNjw" bpdm:messageIds=" out:_cqPjAG5qEeWQz52YX8KNjw">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:BeginResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="nsCrossJoinOPRequestMsg" messageType="ns:CrossJoinOPInput" binding="ns:CrossJoinOPPortSoapBinding" operation="CrossJoinOP" opMsgType="0" bpdm:id="_sLLSkG5wEeWQz52YX8KNjw" bpdm:messageIds=" out:_sKvNsG5wEeWQz52YX8KNjw">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="ns:CrossJoinOPInput" bpdm:linkedPart="parameters" bpdm:binding="ns:CrossJoinOPPortSoapBinding" bpdm:opMsgType="0" bpdm:operation="CrossJoinOP"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="nsCrossJoinOPResponseMsg" messageType="ns:CrossJoinOPOutput" binding="ns:CrossJoinOPPortSoapBinding" operation="CrossJoinOP" opMsgType="1" bpdm:id="_st8ogm5wEeWQz52YX8KNjw" bpdm:messageIds="inc:_stNBkG5wEeWQz52YX8KNjw"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" operation="Begin" partnerLink="cross_Join_BoardAndStartPlkVar" portType="this:ForStart" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Begin" bpdm:ID="_TGLy0G5qEeWQz52YX8KNjw">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$nsCrossJoinOPRequestMsg.parameters/ns:execute/ns:parameters/ns:e.firstname</bpel:from>
+                        <bpel:to>$nsCrossJoinOPRequestMsg.parameters/ns:execute/ns:parameters/ns:e.firstname</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1898116500" targetPath="$nsCrossJoinOPRequestMsg.parameters/ns:execute/ns:parameters/ns:e.firstname" targetedBy="1234536267-arg0"></mapper:vertice>
+  <mapper:vertice id="1234536267" sourcePath="$nsCrossJoinOPRequestMsg.parameters/ns:execute/ns:parameters/ns:e.firstname"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisBeginRequestMsg" bpdm:msgVarScopeId="_MjAZsG5qEeWQz52YX8KNjw" bpdm:variableIsManaged="true" bpdm:messageType="this:BeginRequest" bpdm:ID="_TGU8wW5qEeWQz52YX8KNjw"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="CrossJoinOP" partnerLink="poolAndCross_Join_BoardForCrossJoinOPPortPlkVar" portType="ns:CrossJoinOPPort" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Cross Join Activities" bpdm:ID="_Uf6l4G5qEeWQz52YX8KNjw">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisBeginRequestMsg.body/tns:name</bpel:from>
+                        <bpel:to>$nsCrossJoinOPRequestMsg.parameters/ns:execute/ns:parameters/ns:e.firstname</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="595840332" targetPath="$nsCrossJoinOPRequestMsg.parameters/ns:execute/ns:parameters/ns:e.firstname" targetedBy="1651468676-arg0"></mapper:vertice>
+  <mapper:vertice id="1651468676" sourcePath="$thisBeginRequestMsg.body/tns:name"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsCrossJoinOPRequestMsg" bpdm:msgVarScopeId="_MjAZsG5qEeWQz52YX8KNjw" bpdm:variableIsManaged="true" bpdm:messageType="ns:CrossJoinOPInput" bpdm:binding="ns:CrossJoinOPPortSoapBinding" bpdm:ID="_sKvNsG5wEeWQz52YX8KNjw"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="nsCrossJoinOPResponseMsg" bpdm:msgVarScopeId="_MjAZsG5qEeWQz52YX8KNjw" bpdm:variableIsManaged="true" bpdm:messageType="ns:CrossJoinOPOutput" bpdm:binding="ns:CrossJoinOPPortSoapBinding" bpdm:ID="_stNBkG5wEeWQz52YX8KNjw"></bpdm:linkset>
+                <bpdm:thrownFault msgFaultNcName="nsCrossJoinOPFault" msgFaultTypeQname="ns:CrossJoinOPFault"/>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask eventType="end: message" operation="Begin" partnerLink="cross_Join_BoardAndStartPlkVar" portType="this:ForStart" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="End" bpdm:ID="_aonpgG5qEeWQz52YX8KNjw">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$nsCrossJoinOPResponseMsg.parameters/ns:rows/ns:row[1]</bpel:from>
+                        <bpel:to>$thisBeginResponseMsg.body/text()</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1408401677" targetPath="$thisBeginResponseMsg.body/text()" targetedBy="1442228105-arg0"></mapper:vertice>
+  <mapper:vertice id="1442228105" dimension="70x20" location="20,221">
+    <mapper:value>$nsCrossJoinOPResponseMsg.parameters</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisBeginResponseMsg" bpdm:msgVarScopeId="_MjAZsG5qEeWQz52YX8KNjw" bpdm:variableIsManaged="true" bpdm:messageType="this:BeginResponse" bpdm:ID="_cqPjAG5qEeWQz52YX8KNjw"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

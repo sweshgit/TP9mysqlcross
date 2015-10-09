@@ -1,0 +1,26 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:diag="http://thisdiagram" xmlns:Cross_Join_Board="http://thisdiagram/Cross_Join_Board" xmlns:Pool="http://thisdiagram/Pool" xmlns:Start="http://thisdiagram/Start" xmlns:tns="http://www.example.org/message" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns="urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" targetNamespace="http://thisdiagram" bpdm:version="6000089" bpdm:canid="_EC1IYG5qEeWQz52YX8KNjw" bpdm:displayName="diag">
+  <pnlk:partnerLinkType name="Cross_Join_BoardAndStart" bpdm:poolOneId="_MjAZsG5qEeWQz52YX8KNjw" bpdm:poolOneIsExecutable="true" bpdm:poolOneName="Cross Join Board" bpdm:poolTwoId="_EDIqYG5qEeWQz52YX8KNjw" bpdm:poolTwoIsExecutable="false" bpdm:poolTwoName="Start">
+    <pnlk:role name="Cross_Join_Board_for_Start" portType="Cross_Join_Board:ForStart" bpdm:thisPoolId="_MjAZsG5qEeWQz52YX8KNjw">
+      <wsdl:portType name="ForStart">
+        <wsdl:operation name="Begin" bpdm:canid="_EDIqYm5qEeWQz52YX8KNjw._TGLy0G5qEeWQz52YX8KNjw._aonpgG5qEeWQz52YX8KNjw.">
+          <wsdl:input message="Cross_Join_Board:BeginRequest" name="Begin" bpdm:canid="_TGU8wW5qEeWQz52YX8KNjw" bpdm:senderId="_EDIqYm5qEeWQz52YX8KNjw" bpdm:receiverId="_TGLy0G5qEeWQz52YX8KNjw" bpdm:senderName="Send" bpdm:receiverName="Begin" bpdm:receiverPoolId="_MjAZsG5qEeWQz52YX8KNjw" bpdm:dataobjectPointer="project:///Schemas/message.xsd?xsdtype={http://www.example.org/message}msg" bpdm:bodyPartElemName="BeginRequest" bpdm:bodyPartElemType="{http://www.example.org/message}msg"></wsdl:input>
+          <wsdl:output message="Cross_Join_Board:BeginResponse" name="BeginResponse" bpdm:canid="_cqPjAG5qEeWQz52YX8KNjw" bpdm:senderId="_aonpgG5qEeWQz52YX8KNjw" bpdm:receiverId="_EDIqYm5qEeWQz52YX8KNjw" bpdm:senderName="End" bpdm:receiverName="Send" bpdm:receiverPoolId="_EDIqYG5qEeWQz52YX8KNjw" bpdm:bodyPartElemName="BeginResponse" bpdm:bodyPartElemType="xs:string"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="PoolAndCross_Join_Board" bpdm:poolOneId="_gnz9EG5wEeWQz52YX8KNjw" bpdm:poolOneIsExecutable="false" bpdm:poolOneName="Pool" bpdm:poolTwoId="_MjAZsG5qEeWQz52YX8KNjw" bpdm:poolTwoIsExecutable="true" bpdm:poolTwoName="Cross Join Board">
+    <pnlk:role name="Pool_for_Cross_Join_Board" portType="Pool:ForCross_Join_Board" bpdm:thisPoolId="_gnz9EG5wEeWQz52YX8KNjw">
+      <wsdl:portType name="ForCross_Join_Board">
+        <wsdl:operation name="Provide-Service-Crossjoinop" bpdm:canid="_Uf6l4G5qEeWQz52YX8KNjw._rmEaYW5wEeWQz52YX8KNjw." bpdm:dataobjectPointer="project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql.wsdl?wsdloperationbound={urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice}CrossJoinOPService/CrossJoinOPPort/CrossJoinOP">
+          <wsdl:input message="ns:CrossJoinOPRequest" name="Provide-Service-Crossjoinop" bpdm:canid="_sKvNsG5wEeWQz52YX8KNjw" bpdm:senderId="_Uf6l4G5qEeWQz52YX8KNjw" bpdm:receiverId="_rmEaYW5wEeWQz52YX8KNjw" bpdm:senderName="Cross Join Activities" bpdm:receiverName="Provide-Service-Crossjoinop" bpdm:receiverPoolId="_gnz9EG5wEeWQz52YX8KNjw" bpdm:dataobjectPointer="project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql.wsdl?messageForBoundOperation={urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice}CrossJoinOPService/CrossJoinOPPort/CrossJoinOP/input/CrossJoinOPRequest"></wsdl:input>
+          <wsdl:output message="ns:CrossJoinOPResponse" name="Provide-Service-CrossjoinopResponse" bpdm:canid="_stNBkG5wEeWQz52YX8KNjw" bpdm:senderId="_rmEaYW5wEeWQz52YX8KNjw" bpdm:receiverId="_Uf6l4G5qEeWQz52YX8KNjw" bpdm:senderName="Provide-Service-Crossjoinop" bpdm:receiverName="Cross Join Activities" bpdm:receiverPoolId="_MjAZsG5qEeWQz52YX8KNjw" bpdm:dataobjectPointer="project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql.wsdl?messageForBoundOperation={urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice}CrossJoinOPService/CrossJoinOPPort/CrossJoinOP/output/CrossJoinOPResponse"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="PoolAndCross_Join_BoardForCrossJoinOPPortPlk" bpdm:canPlkId="_gnz9EG5wEeWQz52YX8KNjw-_MjAZsG5qEeWQz52YX8KNjw">
+    <pnlk:role name="Pool_for_Cross_Join_Board" portType="ns:CrossJoinOPPort"></pnlk:role>
+  </pnlk:partnerLinkType>
+</wsdl:definitions>

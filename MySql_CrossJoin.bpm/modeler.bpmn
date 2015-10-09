@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_EC1IYW5qEeWQz52YX8KNjw" iD="_EC1IYG5qEeWQz52YX8KNjw">
+  <pools xmi:type="bpmn:Pool" xmi:id="_EDIqYW5qEeWQz52YX8KNjw" iD="_EDIqYG5qEeWQz52YX8KNjw" name="Start">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QmQzwG5qEeWQz52YX8KNjw" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QmQzwW5qEeWQz52YX8KNjw" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_TGoewW5qEeWQz52YX8KNjw" iD="_TGoewG5qEeWQz52YX8KNjw" name="cross_Join_BoardBeginRequestMsg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TGoewm5qEeWQz52YX8KNjw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TGoew25qEeWQz52YX8KNjw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TGoezG5qEeWQz52YX8KNjw" key="defaultDeclarationName" value="cross_Join_BoardBeginRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TGxosW5qEeWQz52YX8KNjw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Cross_Join_Board}BeginRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_TGoezW5qEeWQz52YX8KNjw" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TGoezm5qEeWQz52YX8KNjw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TGxosG5qEeWQz52YX8KNjw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_cqsO8W5qEeWQz52YX8KNjw" iD="_cqsO8G5qEeWQz52YX8KNjw" name="cross_Join_BoardBeginResponseMsg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cqsO8m5qEeWQz52YX8KNjw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cqsO825qEeWQz52YX8KNjw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cqsO_G5qEeWQz52YX8KNjw" key="defaultDeclarationName" value="cross_Join_BoardBeginResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cq1Y4W5qEeWQz52YX8KNjw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Cross_Join_Board}BeginResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_cqsO_W5qEeWQz52YX8KNjw" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cqsO_m5qEeWQz52YX8KNjw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cq1Y4G5qEeWQz52YX8KNjw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_EDIqY25qEeWQz52YX8KNjw" iD="_EDIqYm5qEeWQz52YX8KNjw" associations="_TGoezW5qEeWQz52YX8KNjw _cqsO_W5qEeWQz52YX8KNjw" name="Send" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_TGU8wm5qEeWQz52YX8KNjw"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_cqPjAW5qEeWQz52YX8KNjw"/>
+    </vertices>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_MjAZsW5qEeWQz52YX8KNjw" iD="_MjAZsG5qEeWQz52YX8KNjw" name="Cross Join Board">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_TGxouG5qEeWQz52YX8KNjw" iD="_TGxot25qEeWQz52YX8KNjw" name="thisBeginRequestMsg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TGxouW5qEeWQz52YX8KNjw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TGxoum5qEeWQz52YX8KNjw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TG7ZuG5qEeWQz52YX8KNjw" key="defaultDeclarationName" value="thisBeginRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TG7ZvG5qEeWQz52YX8KNjw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Cross_Join_Board}BeginRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_TG7ZuW5qEeWQz52YX8KNjw" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TG7Zum5qEeWQz52YX8KNjw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TG7Zu25qEeWQz52YX8KNjw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_cqid8W5qEeWQz52YX8KNjw" iD="_cqid8G5qEeWQz52YX8KNjw" name="thisBeginResponseMsg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cqid8m5qEeWQz52YX8KNjw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cqid825qEeWQz52YX8KNjw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cqid_G5qEeWQz52YX8KNjw" key="defaultDeclarationName" value="thisBeginResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cqieAG5qEeWQz52YX8KNjw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Cross_Join_Board}BeginResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_cqid_W5qEeWQz52YX8KNjw" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cqid_m5qEeWQz52YX8KNjw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cqid_25qEeWQz52YX8KNjw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_sLLSkW5wEeWQz52YX8KNjw" iD="_sLLSkG5wEeWQz52YX8KNjw" name="nsCrossJoinOPRequestMsg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sLLSkm5wEeWQz52YX8KNjw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sLLSk25wEeWQz52YX8KNjw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sLLSnG5wEeWQz52YX8KNjw" key="defaultDeclarationName" value="nsCrossJoinOPRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sLVDk25wEeWQz52YX8KNjw" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice}CrossJoinOPInput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_sLVDkG5wEeWQz52YX8KNjw" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sLVDkW5wEeWQz52YX8KNjw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sLVDkm5wEeWQz52YX8KNjw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_st8og25wEeWQz52YX8KNjw" iD="_st8ogm5wEeWQz52YX8KNjw" name="nsCrossJoinOPResponseMsg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_st8ohG5wEeWQz52YX8KNjw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_st8ohW5wEeWQz52YX8KNjw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_suGZeG5wEeWQz52YX8KNjw" key="defaultDeclarationName" value="nsCrossJoinOPResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_suPjYW5wEeWQz52YX8KNjw" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice}CrossJoinOPOutput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_suGZeW5wEeWQz52YX8KNjw" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_suGZem5wEeWQz52YX8KNjw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_suPjYG5wEeWQz52YX8KNjw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_TGLy0W5qEeWQz52YX8KNjw" iD="_TGLy0G5qEeWQz52YX8KNjw" associations="_TG7ZuW5qEeWQz52YX8KNjw" outgoingEdges="_UgEW4W5qEeWQz52YX8KNjw" name="Begin" activityType="EventStartMessage">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_TGU8wm5qEeWQz52YX8KNjw"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_Uf6l4W5qEeWQz52YX8KNjw" iD="_Uf6l4G5qEeWQz52YX8KNjw" associations="_sLVDkG5wEeWQz52YX8KNjw _suGZeW5wEeWQz52YX8KNjw" outgoingEdges="_aoxagm5qEeWQz52YX8KNjw" incomingEdges="_UgEW4W5qEeWQz52YX8KNjw" name="Cross Join Activities" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_sKvNsW5wEeWQz52YX8KNjw"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_stNBkW5wEeWQz52YX8KNjw"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_aonpgW5qEeWQz52YX8KNjw" iD="_aonpgG5qEeWQz52YX8KNjw" associations="_cqid_W5qEeWQz52YX8KNjw" incomingEdges="_aoxagm5qEeWQz52YX8KNjw" name="End" activityType="EventEndMessage">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_cqPjAW5qEeWQz52YX8KNjw"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_UgEW4W5qEeWQz52YX8KNjw" iD="_UgEW4G5qEeWQz52YX8KNjw"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_aoxagm5qEeWQz52YX8KNjw" iD="_aoxagW5qEeWQz52YX8KNjw"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_gnz9EW5wEeWQz52YX8KNjw" iD="_gnz9EG5wEeWQz52YX8KNjw" name="Pool">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lJQH8G5wEeWQz52YX8KNjw" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lJQH8W5wEeWQz52YX8KNjw" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_sLe0kW5wEeWQz52YX8KNjw" iD="_sLe0kG5wEeWQz52YX8KNjw" name="nsCrossJoinOPRequestMsg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sLe0km5wEeWQz52YX8KNjw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sLe0k25wEeWQz52YX8KNjw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sLe0nG5wEeWQz52YX8KNjw" key="defaultDeclarationName" value="nsCrossJoinOPRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sLe0oG5wEeWQz52YX8KNjw" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice}CrossJoinOPInput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_sLe0nW5wEeWQz52YX8KNjw" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sLe0nm5wEeWQz52YX8KNjw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sLe0n25wEeWQz52YX8KNjw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_stzegW5wEeWQz52YX8KNjw" iD="_stzegG5wEeWQz52YX8KNjw" name="nsCrossJoinOPResponseMsg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_stzegm5wEeWQz52YX8KNjw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_stzeg25wEeWQz52YX8KNjw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_st8oeG5wEeWQz52YX8KNjw" key="defaultDeclarationName" value="nsCrossJoinOPResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_st8ofG5wEeWQz52YX8KNjw" key="douri2" value="builtin:///diagram?wsdlmessage={urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice}CrossJoinOPOutput"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_st8oeW5wEeWQz52YX8KNjw" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_st8oem5wEeWQz52YX8KNjw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_st8oe25wEeWQz52YX8KNjw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_rmEafG5wEeWQz52YX8KNjw" iD="_rmEaYW5wEeWQz52YX8KNjw" associations="_sLe0nW5wEeWQz52YX8KNjw _st8oeW5wEeWQz52YX8KNjw" name="Provide-Service-Crossjoinop" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rmEafW5wEeWQz52YX8KNjw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rmEafm5wEeWQz52YX8KNjw" key="douri" value="project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql.wsdl?wsdloperationbound={urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice}CrossJoinOPService/CrossJoinOPPort/CrossJoinOP"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rmEaf25wEeWQz52YX8KNjw" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rmEagG5wEeWQz52YX8KNjw" key="projectRelativePath" value="Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_sKvNsW5wEeWQz52YX8KNjw"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_stNBkW5wEeWQz52YX8KNjw"/>
+    </vertices>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_TGU8wm5qEeWQz52YX8KNjw" iD="_TGU8wW5qEeWQz52YX8KNjw" source="_EDIqY25qEeWQz52YX8KNjw" target="_TGLy0W5qEeWQz52YX8KNjw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0YYkkG5wEeWQz52YX8KNjw" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0YYkkW5wEeWQz52YX8KNjw" key="douri" value="project:///Schemas/message.xsd?xsdtype={http://www.example.org/message}msg"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_cqPjAW5qEeWQz52YX8KNjw" iD="_cqPjAG5qEeWQz52YX8KNjw" source="_aonpgW5qEeWQz52YX8KNjw" target="_EDIqY25qEeWQz52YX8KNjw"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_sKvNsW5wEeWQz52YX8KNjw" iD="_sKvNsG5wEeWQz52YX8KNjw" source="_Uf6l4W5qEeWQz52YX8KNjw" target="_rmEafG5wEeWQz52YX8KNjw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sKvNsm5wEeWQz52YX8KNjw" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sKvNs25wEeWQz52YX8KNjw" key="douri" value="project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql.wsdl?messageForBoundOperation={urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice}CrossJoinOPService/CrossJoinOPPort/CrossJoinOP/input/CrossJoinOPRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_stNBkW5wEeWQz52YX8KNjw" iD="_stNBkG5wEeWQz52YX8KNjw" source="_rmEafG5wEeWQz52YX8KNjw" target="_Uf6l4W5qEeWQz52YX8KNjw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_stWykG5wEeWQz52YX8KNjw" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_stWykW5wEeWQz52YX8KNjw" key="douri" value="project:///Connectors/Database/CrossJoinOP.sql/CrossJoinOP.sql.wsdl?messageForBoundOperation={urn:intalio.com:connectors:database:mysql_crossjoin:crossjoinopservice}CrossJoinOPService/CrossJoinOPPort/CrossJoinOP/output/CrossJoinOPResponse"/>
+    </eAnnotations>
+  </messages>
+</bpmn:BpmnDiagram>

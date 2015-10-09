@@ -1,0 +1,16 @@
+
+activity_renamed=false
+build.required=yes
+deploy_bundleShouldBeDeployed=true
+deploy_serverUrl=http\://localhost\:8080/intalio/ode
+deploymenttimeout=120
+diagram_baseUri=http\://mysql_crossjoin.com
+eclipse.preferences.version=1
+full.build.required=no
+implicit_task_deleted=true
+is.timerstart.annotation.persistance.required=no
+opening_process_diagram=false
+reset.node.cache=yes
+serverpingtimeout=10
+type=non.unique
+uuid=aa5f1eec-1ca4-4c4d-9dfd-54bbbc0fef9d
